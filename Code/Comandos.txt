@@ -1,0 +1,44 @@
+
+AÑADIR
+-addOffer 'Fiesta de Nochevieja ISD1' 'Fiesta de Nochevieja con todo incluido' 60 40 2 '<now + 1 min>' '31/12/2013 23:00' '01/01/2014 04:00' 
+-addOffer 'Fiesta de Nochevieja ISD2' 'Fiesta de Nochevieja con todo incluido' 50 35 null '<now + 1 min>' '31/12/2013 23:00' '01/01/2014 04:00'  
+-addOffer 'Fiesta de Nochevieja ISD3' 'Fiesta de Nochevieja con todo incluido' 80 50 2 '<now + 1 min>' '<now + 5 min>' '<now + 5 min>'  
+-addOffer 'Pre Fiesta' 'Fiesta ya terminada' 70 35 null '<now + 1 min>' '<now + 2 min>' '<now + 2 min>' 
+
+RESERVAR
+-addReserve <offerId2> 'user1@udc.es' '1111222233334444' 
+-addReserve <offerId3> 'user2@udc.es' '1111222233335555' 
+-addReserve <offerId3> 'user3@udc.es' '1111222233336666' 
+-addReserve <offerId3> 'user4@udc.es' '1111222233337777' 
+-addReserve <offerId4> 'user5@udc.es' '1111222233338888' 
+-addReserve <offerId5> 'user5@udc.es' '1111222233338888'
+
+ACTUALIZAR
+-updateOffer <offerId1> 'Fiesta de Nochevieja ISD1' 'Fiesta de Nochevieja con todo incluido' 60 40 2 '22/12/2013 09:00' '21/12/2013 23:00' '01/01/2014 04:00'  
+-updateOffer <offerId1> 'Fiesta de Nochevieja ISD1' 'Fiesta de Nochevieja modificada' 50 35 2 '22/12/2013 09:00' '31/12/2013 23:00' '01/01/2014 04:00'  
+-updateOffer <offerId2> 'Fiesta de Nochevieja ISD2 v2' 'Fiesta de Nochevieja con todo incluido' 50 35 null '22/12/2013 09:00' '31/12/2013 23:00' '01/01/2014 04:00' 
+-updateOffer <offerId5> 'Fiesta de Nochevieja ISD2 v2' 'Fiesta de Nochevieja con todo incluido' 50 35 null '22/12/2013 09:00' '31/12/2013 23:00' '01/01/2014 04:00' 
+
+BUSCAR OFERTA
+-findOffer <offerId1> 
+-findOffer <offerId2> 
+-findOffer <offerId4> 
+-findOffer <offerId5>
+
+RECLAMAR RESERVA
+-claimReserve <reserveId1 | reserveCodeForReserveId1> 
+-claimReserve <reserveId2 | reserveCodeForReserveId2> 
+-claimReserve <reserveId2 | reserveCodeForReserveId2> 
+-claimReserve <reserveId3 | reserveCodeForReserveId2>
+
+BUSCAR RESERVAS 
+-findReserves <offerId2> null 
+-findReserves <offerId3> 'CLOSED'
+
+BUSCAR RESERVA
+-findReserve <reserveId1>
+
+BORRAR OFERTAS
+-removeOffer <offerId1> 
+-removeOffer <offerId2>
+-removeOffer <offerId3>
